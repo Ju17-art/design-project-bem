@@ -29,6 +29,53 @@ body * {
   font-size: 11px;
 }
 
+.checkbox {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+}
+
+.checkbox__input {
+  display: none;
+}
+
+.checkbox__custom {
+  display: inline-flex;
+  width: 18px;
+  height: 18px;
+  background: #e3b873;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  flex-shrink: 0;
+}
+
+.checkbox__custom::before {
+  opacity: 0;
+  transition: 0.2s;
+  content: "";
+  position: absolute;
+  width: 6px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+  margin-top: -4px;
+}
+
+.checkbox__input:checked + .checkbox__custom::before {
+  opacity: 1;
+}
+
+.checkbox__text {
+  font-family: "Nunito Sans", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 164%;
+}
+
 /* === Header === */
 
 .header {
@@ -415,49 +462,9 @@ body * {
 
 .control__checkbox {
   display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  cursor: pointer;
-}
-
-.control__checkbox-native {
-  display: none;
-}
-
-.control__checkbox-custom {
-  display: inline-flex;
-  width: 18px;
-  height: 18px;
-  background: #e3b873;
-  color: #fff;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-}
-
-.control__checkbox-custom::before {
-  opacity: 0;
-  transition: 0.2s;
-  content: "";
-  position: absolute;
-  width: 6px;
-  height: 10px;
-  border: solid white;
-  border-width: 0 2px 2px 0;
-  transform: rotate(45deg);
-  margin-top: -4px;
-}
-
-.control__checkbox-native:checked + .control__checkbox-custom::before {
-  opacity: 1;
 }
 
 .control__checkbox-text {
-  font-family: "Nunito Sans", sans-serif;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 163.68%;
   color: #181818;
 }
 
@@ -679,11 +686,6 @@ body * {
   width: 408px;
 }
 
-.measure__checkbox {
-  margin-left: 0px;
-  margin-top: 0px;
-}
-
 .measure__button {
   font-style: normal;
   border-radius: 0px;
@@ -783,55 +785,13 @@ body * {
   color: #ffffff;
 }
 
-.checkbox {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  cursor: pointer;
+.measure__checkbox {
+  margin-left: 0px;
+  margin-top: 0px;
 }
 
-.checkbox__input {
-  display: none;
-}
-
-.checkbox__custom {
-  display: inline-flex;
-  width: 18px;
-  height: 18px;
-  background: #e3b873;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  flex-shrink: 0;
-}
-
-.checkbox__custom::before {
-  opacity: 0;
-  transition: 0.2s;
-  content: "";
-  position: absolute;
-  width: 6px;
-  height: 10px;
-  border: solid white;
-  border-width: 0 2px 2px 0;
-  transform: rotate(45deg);
-  margin-top: -4px;
-}
-
-.checkbox__input:checked + .checkbox__custom::before {
-  opacity: 1;
-}
-
-.checkbox__text {
-  font-family: "Nunito Sans", sans-serif;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 164%;
-}
-
-.checkbox__text--light {
-  color: #ffffff;
+.measure__checkbox-text {
+  color: #fff;
 }
 
 /* === Секция 6 Fantasies === */
@@ -1223,6 +1183,10 @@ body * {
   margin-bottom: 40px;
 }
 
+.contacts__checkbox-text {
+  color: #fff;
+}
+
 .contacts__submit {
   border-radius: 0px;
   line-height: 205%;
@@ -1274,57 +1238,6 @@ body * {
 .contacts__map-img {
   max-width: 100%;
   height: auto;
-}
-
-.checkbox {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  cursor: pointer;
-}
-
-.checkbox__input {
-  display: none;
-}
-
-.checkbox__custom {
-  display: inline-flex;
-  width: 18px;
-  height: 18px;
-  background: #e3b873;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  flex-shrink: 0;
-}
-
-.checkbox__custom::before {
-  opacity: 0;
-  transition: 0.2s;
-  content: "";
-  position: absolute;
-  width: 6px;
-  height: 10px;
-  border: solid white;
-  border-width: 0 2px 2px 0;
-  transform: rotate(45deg);
-  margin-top: -4px;
-}
-
-.checkbox__input:checked + .checkbox__custom::before {
-  opacity: 1;
-}
-
-.checkbox__text {
-  font-family: "Nunito Sans", sans-serif;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 164%;
-}
-
-.checkbox__text--light {
-  color: #ffffff;
 }
 
 /* === FOOTER === */
@@ -1619,8 +1532,8 @@ body * {
   }
 
   .control__field {
-    width: 95% !important; /* ← было из .form__group */
-    margin-bottom: 25px !important; /* ← было из .form__group */
+    width: 95% !important;
+    margin-bottom: 25px !important;
   }
 
   .control__input {
@@ -1648,7 +1561,7 @@ body * {
   }
 
   .control__checkbox-text {
-    color: #ffffff !important;
+    color: #ffffff;
     font-size: 13px !important;
   }
 
