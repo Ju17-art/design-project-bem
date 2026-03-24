@@ -23,6 +23,7 @@ body * {
   border: 0;
   padding: 13px 33px;
   color: white;
+  font-family: "Nunito Sans", sans-serif;
   font-style: italic;
   text-transform: uppercase;
   font-size: 11px;
@@ -119,7 +120,7 @@ body * {
   gap: 20px;
 }
 
-.button.button__submit {
+.button--submit {
   background: transparent;
   border: 1px solid white;
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
@@ -398,10 +399,9 @@ body * {
   color: #363636;
 }
 
-.button.control__submit {
+.control__submit {
   font-size: 13px;
   line-height: 27px;
-  padding: 11px 75px;
   font-style: normal;
   width: 200px;
   grid-area: submit;
@@ -547,16 +547,13 @@ body * {
   line-height: 27px;
 }
 
-.button.repair-card__price {
+.repair-card__price {
   font-family: "Yeseva One", serif;
   font-style: normal;
   font-weight: 400;
   font-size: 18px;
   line-height: 139%;
   text-align: left;
-  text-transform: uppercase;
-  color: #ffffff;
-  background: #e3b873;
   box-shadow: 5px 5px 10px rgba(227, 184, 115, 0.3);
   z-index: 10;
   bottom: 0px;
@@ -564,7 +561,6 @@ body * {
   left: -34px;
   border-radius: 0px;
   display: inline-block;
-  padding: 13px 33px;
 }
 
 /* === Секция 5 Measure === */
@@ -688,10 +684,9 @@ body * {
   margin-top: 0px;
 }
 
-.button.measure__button {
+.measure__button {
   font-style: normal;
   border-radius: 0px;
-  font-family: "Nunito Sans", sans-serif;
   font-weight: 400;
   font-size: 13px;
   line-height: 164%;
@@ -1228,16 +1223,14 @@ body * {
   margin-bottom: 40px;
 }
 
-.button.contacts__submit {
+.contacts__submit {
   border-radius: 0px;
   line-height: 205%;
   display: block;
-  width: auto;
   padding: 11px 75px;
+  width: auto;
   font-style: normal;
   font-size: 13px;
-  font-family: "Nunito Sans", sans-serif;
-  font-weight: 400;
 }
 
 .contacts__info {
